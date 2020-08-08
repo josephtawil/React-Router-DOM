@@ -3,8 +3,11 @@ import { BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import './App.css';
 import Form from './components/Form/Form';
 import Nav from './components/Nav/Nav';
+import Card from './components/Card/Card';
 
 function App() {
+  const form = Form.children;
+  console.log(Form.children);
   return (
     <div className="App">
      <Router>
@@ -25,9 +28,9 @@ function App() {
         {/*This is another way of writing it*/}
          <Route exact path = "/contact" component={Form}/>
        </Switch>
-
-       
      </Router>
+
+     <Card name={form}/>
     </div>
   );
 }

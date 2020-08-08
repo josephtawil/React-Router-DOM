@@ -13,7 +13,7 @@ const Form = () => {
 //   console.log(thing.first);
 
 
-  const [form, setForm] = useState( {email: "", password: ""});
+  const [form, setForm] = useState( {email: "",name:"", password: ""});
   let example = form;
   console.log(example);
   const modifyForm = (e)=>{
@@ -51,11 +51,19 @@ const Form = () => {
     <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
   <div className="form-group">
+    <label htmlFor="exampleName">Name</label>
+    <input 
+    onChange={modifyForm} 
+    name="name" className="form-control"  />
+    
+  </div>
+  <div className="form-group">
     <label htmlFor="exampleInputPassword1">Password</label>
     <input onChange={modifyForm} name="password" className="form-control" id="exampleInputPassword1"/>
   </div>
   <button type="submit" className="btn btn-primary">Submit</button>
 </form>
+
         </div>
         <h1>{form.email}</h1>
         <h1>{form.password}</h1>
