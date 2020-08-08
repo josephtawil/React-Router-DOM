@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import './App.css';
-import Form from './components/Form';
+import Form from './components/Form/Form';
 import Nav from './components/Nav/Nav';
 
 function App() {
